@@ -1,12 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+}
+
+table, th, td {  
+  border: 1px solid rgb(28, 23, 23);
+  border-collapse: collapse;
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+.rowlast {
+  display: flex;
+}
+</style>
 </head>
-<body>
+<body style="background-color:rgba(94, 228, 96, 0.5);">
+<div class="row">
+  <div class="column">
+    <img src="logo.gif" alt="Lefttorch" style="width: 60%;">
+  </div>  
+</div>
+
+
+<table style="width: 50%;">
+  <tr >
+    <td width="100"><U>Home page</U></td>
+    <td width="100"><U>About</U></td>
+    <td width="100"><U>My Archives</U></td>
+    <td width="100"><U>Links</U></td>
+  </tr>
+</table>
+<h4>Recent Posts</h4>
+<ul>
+  <li><a href="http://www.google.com">A Theme From the Past</a>
+  <li><a href="https://en.wikipedia.org/wiki/The_Greatest_Game_Ever_Played">Best Game You Ever Played</a>
+  <li><a href="https://en.wikipedia.org/">The King Is Back</a>
+  <li><a href="https://en.wikipedia.org/">Scientific Themes</a>
+</ul>
+<!-- 
+<div class="rowlast">
+    <img src="white.jpg" alt="Lefttorch" style="width: 10%;">
+  
+</div> -->
+
+<form id="form"> 
+  <input type="search" id="query" name="q" placeholder="Search...">
+  <button>Search</button>
+  <button onclick="clearclick()">clear</button>
+  
+</form>
+
+<script>
+  const f = document.getElementById('form');
+  const q = document.getElementById('query');
+  const google = 'https://www.google.com/search?q=';
+
+  function submitted(event) {
+    event.preventDefault();
+    const url = google + q.value;
+    const win = window.open(url);
+    win.focus();
+  }
+
+  function clearclick(){
     
+
+  }
+
+  f.addEventListener('submit', submitted);
+</script>
+
+
+<h1>My first styled page</h1>
+
+<p>Welcome to my RETRO styled DEMO page!
+
+<p>It lacks images, but at least it has style.
+And it has links;
+
+<p>There should be more here, but I don't know
+what yet.
+
+<!-- Sign and date the page, it's only polite! -->
+<address>Made 5 April 1992 <br>
+  by myself.</address>
+
+
 </body>
 </html>
